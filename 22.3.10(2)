@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+	int Num = 0;
+	int i;
+	int Array[] = { 10,12,32,45,85,65,77,89,29,51 };	
+	int max = Array[0];
+	int sz = sizeof(Array) / sizeof(Array[0]);
+	scanf("%d", &Num);
+	for (i = 0; i < sz; i++)
+	{
+		if (Array[i] > Num)
+		{
+			max = Array[i];
+			printf("%d ", Array[i]);
+		}
+	}
+	if (max <= Num)
+	{
+		printf("找不到");
+	}
+	return 0;
+}
