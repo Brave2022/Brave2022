@@ -1,0 +1,31 @@
+#define	_CRT_SECURE_NO_WARNINGS
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char Array[20] = { 0 };
+	int i;
+	for (i = 0; i < 3;i++)
+	{
+		printf("请输入密码:");
+		scanf("%s", Array);
+		if (strcmp(Array, "123456")==0)		//==不能比较两个字符串的大小，应使用库函数-strcmp
+		{
+			printf("密码正确\n");
+			break;
+		}
+		else
+		{
+			printf("密码错误\n");
+		}
+	}
+	if (i == 3)
+	{
+		Sleep(1000);
+		system("cls");
+		printf("已输入三次密码，自动退出\n");
+	}
+	
+	return 0;
+}
