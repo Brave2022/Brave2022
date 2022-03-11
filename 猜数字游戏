@@ -1,0 +1,70 @@
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h>
+
+void menu()
+{
+	printf("猜数字游戏:\n");
+	printf("*                                                *\n");
+	printf("*           1. play      0. exit                 *\n");
+	printf("*				`                                *\n");
+}
+
+void game()
+{
+	//printf("开始游戏\n");
+	int ret = 0;
+	int guess = 0;
+	ret = rand()%100+1;//生成随机数
+	//printf("%d", ret);
+
+	while (1)
+	{
+		printf("青菜数字:\n");
+		scanf("%d", & guess);
+		if (guess < ret)
+		{
+			printf("菜小了\n");
+		}
+		if (guess > ret)
+		{
+			printf("菜大了\n");
+		}
+		if (guess == ret)
+		{
+			printf("菜对了\n");
+			Sleep(1000);		//延迟函数
+			system("cls");		//清屏函数
+			break;
+			
+		}
+	}
+}
+
+int main()
+{	
+	srand((unsigned int)time(NULL));	//使用rand()函数需要使用
+	int i = 0;
+	do
+	{
+
+		menu();
+		printf("请选择:>");
+		scanf("%d",&i );
+		switch (i)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏");
+			break;
+		default :
+			printf("请重新选择:>");
+			break;
+		}
+
+	} while (i);
+
+	return 0;
+}
