@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int get_remainder(int x, int y)
+{
+	int z = 0;
+	z = x % y;
+	return z;
+}
+
+int main()
+{
+	int a = 20, b = 10;
+	scanf("%d%d", &a, &b);
+	int max = get_remainder(a,b);
+	printf("max = %d", max);
+	return 0;
+}
