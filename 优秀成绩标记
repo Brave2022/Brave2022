@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	char student_number[13] ;
+	char sex ;
+	int a = 0, b = 0, c = 0, d = 0;
+	scanf("%s %c %d %d %d %d",&student_number,&sex, &a, &b, &c, &d);
+	int mid = (a + b + c + d) / 4;
+	if (mid > 85)
+	{
+		printf("%s y", student_number);
+	}
+	else
+		printf("%s n", student_number);
+	return 0;
+}
