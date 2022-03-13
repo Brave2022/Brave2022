@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int m = 0;
+	int n = 0;
+	int ret = 0;
+	scanf("%d%d", &m, &n);
+	for (m; m <= n; m++)
+	{
+		ret = ret + m;	
+	}
+	printf("%d", ret);
+	return 0;
+}
