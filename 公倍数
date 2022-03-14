@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	int n = 0;
+	int count = 0;
+	scanf("%d", &n);
+	int i = 100;
+	while (i>=100&&i<=n)
+	{
+		if (i % 42==0)
+		{
+			count++;
+			printf("%d ", i);
+		}
+		i++;
+	}
+	printf("\ncount = %d", count);
+	return 0;
+}
+
+/*计算并输出100至某个整数n（10000000>n>100)之间能同时被2、3、7整除的整数个数。
+提示 必须通过while循环实现多组数据输入。依次测试范围内的每个数据，符合条件则计数*/
