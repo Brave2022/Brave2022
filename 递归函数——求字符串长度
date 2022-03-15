@@ -1,0 +1,20 @@
+#include <stdio.h>
+int my_strlen(char* ch)
+{
+	if (*ch != '\0')
+	{
+		return 1 + my_strlen(ch + 1);
+	}
+	else
+		return 0;
+
+}
+
+int main()
+{
+	char ch[] = "bit";
+	int length = 0;
+	length = my_strlen(ch);
+	printf("length = %d", length);
+	return 0;
+}
