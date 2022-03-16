@@ -1,0 +1,20 @@
+#include <stdio.h>
+int Fib(int n)
+{
+	int ret = 0;
+	if (n <= 2)
+		return 1;
+	else
+		ret = Fib(n - 1) + Fib(n - 2);
+	return ret;
+}
+
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	int ret = Fib(n);
+	printf("ret = %d", ret);
+	return 0;
+}
+求第n个斐波那契  1 1 2 3 5 8 13 21 34 55
