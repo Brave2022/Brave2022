@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	char arr1[] = "abc";  // a b c \0
+	char arr2[] = { 'a','b','c' };  // a b c
+	char arr3[] = { 1,2,3,4,5,6,7,8,9,10,0};
+	char arr4[] = { 123456 };//一个数
+	char arr5[3][4] = { {1,2,3,4},{5,6,7,8} ,9};//3行4列   列不能为空
+	printf("%d\n", (int)strlen(arr1));//3     /0前结束
+	printf("%d\n", (int)strlen(arr2));//因为遇不到/0，所以是随意的数字
+	printf("%d\n", (int)strlen(arr3));//如果数列中没有0，会出现arr2的情况
+	printf("%d\n", (int)strlen(arr4));    //strlen()只能计算字符串长度
+	printf("%d\n", (int)sizeof(arr1));
+	printf("%d\n", (int)sizeof(arr2));
+	printf("%d\n", (int)sizeof(arr3));
+	printf("%d\n", (int)sizeof(arr4));
+	for (int i = 0; i < sizeof(arr3) / sizeof(arr3[0]);i++)
+	{
+		printf("&arr[%d] = %p\n",i, &arr3[i]);
+	}
+	for (int k = 0; k < 3; k++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			printf("%d ", arr5[k][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
