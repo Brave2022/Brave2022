@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int m = 0;
+	int n = 1;
+	int ret = 0;
+	scanf("%d", &m);
+	if (m <= 20000)
+	{
+		while (ret <= m)
+			{	
+				ret = ret + n;
+				n++;
+			}
+	}
+	printf("%d", n-2);
+	return 0;
+}
