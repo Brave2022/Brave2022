@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9 };
+	printf("%p\n", arr);		//数组名是首元素地址   下面是仅有的两种例外
+	printf("%p\n", arr+1);
+
+	printf("%p\n", &arr[0]);
+	printf("%p\n", &arr[0]+1);
+
+	printf("%p\n", &arr);		//&arr表示整个数组地址
+	printf("%p\n", &arr+1);
+
+	printf("%d\n", sizeof(arr));	//sizeof(arr)表示整个数组的地址
+	return 0;
+}
