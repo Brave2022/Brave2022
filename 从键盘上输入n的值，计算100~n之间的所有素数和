@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int n = 0,i=0;
+	int k = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	for (i = 100; i < n; i++)
+	{
+		for (k = 2; k < i; k++)
+		{
+			if (i % k == 0)//不是素数
+			{
+				break;//跳出来的时候i<k
+			}
+		}
+		if (i == k)
+		{
+			ret = i + ret;
+		}
+	}
+		printf("%d ", ret);
+	return 0;
+}
