@@ -1,0 +1,18 @@
+
+int main()
+{
+	int a = 5;
+	int b = 3;
+	printf("a=%d b=%d\n", a, b);
+
+	// ^ 按位异或
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+
+	//a = a + b;
+	//b = a - b;
+	//a = a - b;
+	printf("a=%d b=%d\n", a, b);
+	return 0;
+}
