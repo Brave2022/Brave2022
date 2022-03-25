@@ -1,0 +1,24 @@
+计算并输出100至某个整数n（10000000>n>100)之间能同时被2、3、7整除的整数个数
+int main()
+{
+	int n = 0;
+	int i = 0;
+	int count = 0;
+	while (scanf("%d", &n)!=EOF)
+	{
+		for (i = 100; i <= n; i++)
+		{
+			if (i % 2 == 0 && i % 3 ==0 && i % 7 == 0)
+			{
+				count++;
+			}
+			if (i == n)
+			{
+				printf("%d\n", count);
+				count = 0;
+				continue;
+			}
+		}
+	}
+	return 0;
+}
