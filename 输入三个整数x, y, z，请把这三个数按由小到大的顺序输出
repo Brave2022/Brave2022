@@ -1,0 +1,29 @@
+//输入三个整数x, y, z，请把这三个数按由小到大的顺序输出
+int main()
+{
+	int x = 0;
+	int y = 0;
+	int z = 0;
+	int ret = 0;
+	scanf("%d%d%d", &x, &y, &z);
+	if (x > y)
+	{
+		ret = x;
+		x = y;
+		y = ret;
+	}
+	if (x > z)
+	{
+		ret = x;
+		x = z;
+		z = ret;
+	}
+	if (y > z)
+	{
+		ret = y;
+		y = z;
+		z = ret;
+	}
+	printf("%d %d %d\n",x,y,z);
+	return 0;
+}
