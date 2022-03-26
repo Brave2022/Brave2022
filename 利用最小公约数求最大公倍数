@@ -1,0 +1,31 @@
+//利用数m*数n/最小公约数求m和n的最小公倍数
+
+#include <stdio.h>
+int main()
+{
+	int m = 0;
+	int n = 0;
+	int ret = 0;
+	int i = 0;
+	scanf("%d%d", &m, &n);
+	int a = m; int b = n;
+	if (m < n)
+	{
+		ret = m;
+		m = n;
+		n = ret;
+	}
+	do
+	{
+		i = m % n;
+		if (i == 0)
+		{
+			break;
+		}
+		ret = i;
+		m = n;
+		n = ret;
+	} while (1);
+	printf("%d", (a * b) / n);
+	return 0;
+}
