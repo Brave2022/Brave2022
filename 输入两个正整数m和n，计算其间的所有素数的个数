@@ -1,0 +1,26 @@
+//输入两个正整数m和n，计算其间的所有素数的个数
+#include <stdio.h>
+int main()
+{
+	int m = 0; int n = 0;
+	scanf("%d%d", &m, &n);
+	int i = 0; int count = 0;
+	for (i = m; i <= n; i++)
+	{
+		int j = 0;
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j == i)
+		{
+			count++;
+		}
+	}
+	printf("%d", count);
+
+	return 0;
+}
