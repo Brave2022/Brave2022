@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+	int m = 0;
+	int n = 0;
+	int ret = 0;
+	int i = 0;
+	scanf("%d%d", &m, &n);
+	if (m < n)
+	{
+		ret = m;
+		m = n;
+		n = ret;
+	}
+	do
+	{
+		i = m % n;
+		if (i == 0)
+		{
+			break;
+		}
+		ret = i;
+		m = n;
+		n = ret;
+	} while (1);
+	printf("%d", n);
+	return 0;
+}
