@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+	int m = 0;
+	int n = 0;
+	scanf("%d %d", &m, &n);
+	if (m > 0 && n > 0 && m< 100000000 && n< 100000000)
+	{
+		if (m >= n)
+		{
+			if (m % n == 0)
+			{
+				printf("%d", m);
+			}
+		}
+		else
+		{
+			if (n % m == 0)
+			{
+				printf("%d", n);
+			}
+		}
+		if (m % n != 0 && n % m != 0)
+		{
+			printf("%d", m * n);
+		}
+	}
+
+
+	return 0;
+}
