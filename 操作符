@@ -1,0 +1,49 @@
+#include <stdio.h>
+int main()
+{
+	//复合操作符
+	//int a = 5;
+
+	//a=a >> 1;
+	//a >>= 1;
+
+	//a = a + 1;
+	//a += 1;
+
+	//a = a & 1;
+	//a &= 1;
+
+	//单目操作符
+	//int b = 0;
+	//
+	//while (!b)   //b为假则运行
+	//{
+	//	printf("good morning!");
+	//}
+
+	//while (b)   //b为真则运行
+	//{
+	//	printf("good morning!");
+	//}
+
+
+	int a = 10;
+	char c = 'r';
+	char* d = &c;     //char* 对字符取地址
+	int* p = &a;//取地址操作符   int*对数字去抵制
+	  *p = 20;//解引用操作符
+	  int arr[10] = { 0 };
+	  printf("%d\n", sizeof(a));
+	  printf("%d\n", sizeof(int));
+
+	  printf("%d\n", sizeof(c));
+	  printf("%d\n", sizeof(char));
+
+	  printf("%d\n", sizeof(d));
+	  printf("%d\n", sizeof(char*));
+
+	  printf("%d\n", sizeof(arr));
+	  printf("%d\n", sizeof(int [20]));
+
+	return 0;
+}
