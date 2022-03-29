@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	int a = 2;
+	int b = 1;
+	int max = 0;
+	max=(a > b ? a : b);//求a和b的较大值   
+	printf("%d\n", max);
+
+	/*if (a > 5)
+		b = 3;
+	else
+		b = -3;
+	printf("b=%d", b);*/
+
+	b=(a>5?3:-3);     //条件操作符
+	printf("b=%d", b);
+
+	return 0;
+}
