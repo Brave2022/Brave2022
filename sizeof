@@ -1,0 +1,20 @@
+#include <stdio.h>
+void test1(int arr[]) //!!! 数组传的是首位字符地址，也就是指针的大小 64平台是8位 32平台是4位 与是int还是char无关
+{
+	printf("%d\n", sizeof(arr));
+}
+void test2(char ch[])
+{
+	printf("%d", sizeof(ch));
+}
+int main()
+{
+	int arr[10] = {0};
+	char ch[10] = { 0 };
+	printf("%d\n", sizeof(arr));  //40  10（数组大小）*4（int4个字节） 
+	printf("%d\n", sizeof(ch));   //10  10（数组大小）*1（char1个字节）
+	test1(arr);
+	test2(ch);
+
+	return 0;
+}
