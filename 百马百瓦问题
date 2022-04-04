@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	int big_horse = 0, middle_horse = 0,little_horse=0;
+	int i = 0;
+	for (big_horse = 0; big_horse <= 33; big_horse++)
+	{
+		for (middle_horse = 0; middle_horse <= 50; middle_horse++)
+		{
+			little_horse = 100 - big_horse - middle_horse;
+				if (3 * big_horse + 2 * middle_horse + little_horse / 2.0 == 100)
+				{
+					printf("%d %d %d \n", big_horse, middle_horse, little_horse);
+				}
+		}
+	}
+	return 0;
+}
