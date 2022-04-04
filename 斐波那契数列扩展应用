@@ -1,0 +1,18 @@
+//斐波那契数列扩展应用
+#include <stdio.h>
+int main()
+{
+	int i = 3; double d=0;
+	int a = 1, b = 2, c = 3;
+	while (d<=1200)
+	{
+		d = (a + b + c)/2.0;
+		i++;
+		a = b;
+		b = c;
+		c = d;
+		printf("%.1lf ", d);
+	}
+	printf("\n%d", i);
+	return 0;
+}
