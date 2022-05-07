@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+char a[20];
+void f(int n)
+{
+	if (n <= 0) return;
+//	printf("%c",a[n - 1]); 
+	cout << a[n - 1];
+	f(n - 1);
+}
+int main()
+{
+	//gets_s(a);//--gets()函数与scanf用法类似
+	//scanf("%s", &a);
+	int n = 0;
+	cin >> n;
+	cin >> a;
+	f(n);
+	//printf("%c", a[1]);
+	//cout << a[0];
+	return 0;
+}
